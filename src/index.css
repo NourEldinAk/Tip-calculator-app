@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+  font-family: 'Space Mono', monospace;
+}
+html,body,#root{
+  width: 100%;
+  height: 100%;
+  background-color: #c5e4e7;
+}
+
+@layer components{
+  .tip-container{
+    @apply grid grid-cols-3 gap-2
+  }
+  .tip-container button{
+    @apply  text-white py-2
+    rounded-md text-[18px] w-full active:bg-[#9fe8df] active:text-[#00474b]
+  }
+  .sm-container{
+    @apply flex flex-col gap-3
+  }
+  .sm-header{
+    @apply text-darkGrayishCyan text-sm
+  }
+  .input{
+    @apply bg-veryLightCyan py-2 rounded-md
+     w-full text-right text-[19px] text-[#00474b]
+  }
+  
+  .img{
+    @apply inline absolute top-11 pt-1 left-3
+  }
+  .screen-content{
+    @apply flex justify-between px-8 
+  }
+
+  .span{
+    @apply text-xs text-grayishCyan
+  }
+  
+  .screen-button{
+    @apply mx-auto mt-auto w-4/5 p-2 rounded-md active:bg-[#9fe8df]
+     bg-primary text-[#00474b] tracking-tight uppercase
+  }
+
+  .active{
+    @apply bg-primary text-[#00474b] !important
+  }
+  .not-active{
+    @apply bg-[#00474b] text-white
+  }
+  .mobile-design{
+    @apply flex-col h-[900px] w-[375px] my-0 gap-8 rounded-b-none
+  }
+  .mobile-header{
+    @apply h-[10px] mt-10 p-10
+  }
+  
+}
